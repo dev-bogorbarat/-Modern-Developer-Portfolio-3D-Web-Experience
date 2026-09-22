@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Judul yang muncul di tab browser -->
+    <title>[PardanMuklis] | Portofolio Web 3D Interaktif</title>
+    <meta name="description" content="Portofolio interaktif 3D Creator menampilkan karya WebGL Three.js, visualisasi modern, dan proyek web interaktif." />
+    <meta property="og:title" content="[PardanMuklis] | Portofolio Web 3D Interaktif" />
+    <meta property="og:description" content="Portofolio interaktif 3D Creator menampilkan karya WebGL Three.js, visualisasi modern, dan proyek web interaktif." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Library EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      (function() {
+          // 1. Tempelkan Public Key Anda di sini
+          if (typeof emailjs !== 'undefined') {
+            emailjs.init("XWBV_l5nnONC6w5Rr");
+          }
+      })();
+
+      // Menangani Pengiriman Form Kontak
+      document.addEventListener('submit', function(event) {
+          const contactForm = event.target;
+          if (contactForm && contactForm.id === 'contact-form' && !contactForm.dataset.submitting) {
+              const btn = contactForm.querySelector('button[type="submit"]');
+              if (btn) btn.innerText = "Mengirim...";
+              // Handled by React and EmailJS SDK
+          }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

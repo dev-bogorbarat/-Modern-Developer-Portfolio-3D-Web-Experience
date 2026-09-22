@@ -1,0 +1,6 @@
+{
+  "name": "[PardanMuklis] | Portofolio Web 3D Interaktif",
+  "description": "Portofolio interaktif 3D Creator menampilkan karya WebGL Three.js, visualisasi modern, dan proyek web interaktif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
